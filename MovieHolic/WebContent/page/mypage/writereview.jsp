@@ -12,29 +12,33 @@
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css"
 	rel="stylesheet" type="text/css" />
 <style>
-<%--
-modal의 닫기 버튼 --%> .close {
+<%--modal의 닫기 버튼 --%> 
+.close 
+{
 	color: white;
 }
 
-<%--
-datepicker --%> div[role="body"] div, div[role="body"] table, div[role="body"] i
-	{
+<%--datepicker --%> 
+div[role="body"] div, div[role="body"] table, div[role="body"] i
+{
 	color: black;
 }
 
-<%--영화 포스터 --%> .movieImg {
+<%--영화 포스터 --%> 
+.movieImg {
 	border: solid 2px white;
 }
 
-<%--
-별점의 별 icon을 사용하기 위해 필요 --%> .starrating>input {
+<%--별점의 별 icon을 사용하기 위해 필요 --%> 
+.starrating>input {
 	display: none;
 }
 
-<%--
-Remove radio buttons --%> .starrating>label:before {
-	content: "\f005"; <%-- Star --%> margin : 3px;
+<%--Remove radio buttons --%>
+ .starrating>label:before {
+	content: "\f005"; 
+	
+<%-- Star --%> margin : 3px;
 	font-size: 2em;
 	font-family: FontAwesome;
 	display: inline-block;
@@ -42,28 +46,23 @@ Remove radio buttons --%> .starrating>label:before {
 
 .starrating>label {
 	color: #222222;
-	<%--
-	Start
-	color
-	when
-	not
-	clicked
-	--%>
+	
+<%--	Startcolorwhennotclicked	--%>
 }
 
 .starrating>input:checked ~ label {
 	color: #ffca08;
 }
 
-<%--
-Set yellow color when star checked  --%> .starrating>input:hover ~ label
+<%--Set yellow color when star checked  --%>
+.starrating>input:hover ~ label
 	{
 	color: #ffca08;
 }
 
-<%--
-Set yellow color when star hover  --%> <%-- 체크박스 --%> .form-check-input
-	{
+<%--Set yellow color when star hover  --%> <%-- 체크박스 --%> 
+.form-check-input
+{
 	-ms-transform: scale(2); /* IE */
 	-moz-transform: scale(2); /* FF */
 	-webkit-transform: scale(2); /* Safari and Chrome */
@@ -112,6 +111,8 @@ function register() {
 		document.getElementById("register").submit();
 	}
 } --%>
+
+
 $(function() {
 	<%-- 리뷰 저장 이벤트 --%>
 	$("#register").click(function(){
@@ -122,8 +123,6 @@ $(function() {
 		var actor2 = $(this).attr("actor2");
 		var movieName = $(this).attr("movieName");
 		var category = $(this).attr("category");
-	 var chkval = $('input[name="reviewdelete"]:checked');
-     alert(chkval.length);
 	$.ajax({
 		url: '/MovieHolic/mypage?page=register&&movieCdYoung='+ movieCdYoung + '&movieCdNaver='+ movieCdNaver
 		+ '&director=' + director + '&actor1=' + actor1 + '&actor2=' + actor2

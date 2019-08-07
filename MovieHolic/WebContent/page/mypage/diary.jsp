@@ -83,8 +83,7 @@
 		});
 	</script>
 <style>
-<%--
-체크박스 --%> .form-check-input {
+<%--체크박스 --%> .form-check-input {
 	-ms-transform: scale(2); /* IE */
 	-moz-transform: scale(2); /* FF */
 	-webkit-transform: scale(2); /* Safari and Chrome */
@@ -93,36 +92,16 @@
 	margin: 3em 2em 2em;
 }
 
-<%--
-영화제목 --%> .title {
+<%--영화제목 --%> .title {
 	font-size: 18px;
 }
 
-<%--
-별모양 --%> .fas {
+<%--별모양 --%> .fas {
 	font-style: normal;
 	font-family: FontAwesome;
 	font-size: 2.5em;
 }
 
-<%--
-모바일사이즈에서
-
- 
-
-이미지
-
-
-&
-별점
-
- 
-
-숨기기
-
- 
-
---%>
 @media screen and (max-width: 990px) {
 	.hide1 {
 		display: none;
